@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Links CSS -->
+        <link rel="stylesheet" href="./styles/globals.css">
+        <link rel="stylesheet" href="./styles/home.css">
+        <link rel="stylesheet" href="./styles/about.css">
+        <link rel="stylesheet" href="./styles/menu.css">
+        <link rel="stylesheet" href="./styles/contact.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Rubik:wght@400;500;700&display=swap"
+            rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/283acd3283.js" crossorigin="anonymous"></script>
+
+        <link rel="shortcut icon" href="./img/icon.png" type="image/png">
+        <title>CoftoWe</title>
+    </head>
+
+    <body>
+        <header class="header" id="header">
+            <h1>Coftowe - Venha conhecer e comprar diversos café</h1>
+            <div class="boxLogo">
+                <a href="index.html">
+                    <img src="./img/logo-white.svg" alt="Logo">
+                </a>
+            </div>
+
+            <ul id="navbar">
+                <li>
+                    <a href="#home">Inicio</a>
+                </li>
+                <li>
+                    <a href="#about">Sobre</a>
+                </li>
+                <li>
+                    <a href="#menu">Menu</a>
+                </li>
+                <li>
+                    <a href="#contact">Contato</a>
+                </li>
+
+                <button class="btnClose" type="button" onclick="menuOpeningAndClosingControl('#navbar', 0, 'none')">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </ul>
+            <div class="boxAccess">
+                <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button type="button" onclick="menuOpeningAndClosingControl('.boxBag', 1, '300px')">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </button>
+                <button class="btnOpen" type="button" onclick="menuOpeningAndClosingControl('#navbar', 0, 'flex')">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="boxBag">
+                <header>
+                    <h2>Seus Pedidos</h2>
+                    <button class="btnClose" type="button" onclick="menuOpeningAndClosingControl('.boxBag', 1, '0')">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </header>
+                <div class="boxItems">
+                    <img src="https://th.bing.com/th/id/R.acdcf12a42d5149481010b8d4b5339dc?rik=Rk3ReAq%2fZxlZOQ&pid=ImgRaw&r=0" alt="Item">
+                    <div class="boxInfo">
+                        <h3>CAFÉ CAPPUCCINO</h3>
+                        <span>R$ 11,99</span>
+                        <div class="boxAdd">
+                            <button type="button" onclick="changeValueInput('quantity_1', '-')">-</button>
+                            <input id="quantity_1" type="number" min="1" value="1">
+                            <button type="button" onclick="changeValueInput('quantity_1', '+')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxItems">
+                    <img src="https://th.bing.com/th/id/R.ba9b0a3e05ea2d59ec0ca5d69030097e?rik=cgWvzFS2focpXw&riu=http%3a%2f%2flecafedeclara.fr%2fwp-content%2fuploads%2f2018%2f08%2fexpresso-Macchiato-1024x683.jpg&ehk=K9ZgK0ynPaKsKPn9FBSXNUC%2fLlBi73aGyB%2bAErF%2f%2bZI%3d&risl=&pid=ImgRaw&r=0" alt="Item">
+                    <div class="boxInfo">
+                        <h3>Café Macchiato</h3>
+                        <span>R$ 24,99</span>
+                        <div class="boxAdd">
+                            <button type="button" onclick="changeValueInput('quantity_2', '-')">-</button>
+                            <input id="quantity_2" type="number" min="1" value="1">
+                            <button type="button" onclick="changeValueInput('quantity_2', '+')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container">
+            <section class="containerLanding" id="home">
+                <img src="./img/wallpaper.jpg" alt="Wallpaper">
+
+                <div class="boxContent">
+                    <h2>Café gostoso e fesquinho</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos quaerat assumenda rem. Voluptatum
+                        molestiae rerum ad, eligendi.
+                    </p>
+                    <button type="button">
+                        Entrar agora
+                    </button>
+                </div>
+            </section>
+            <section class="containerAbout" id="about">
+                <div class="boxContent">
+                    <img src="./img/cafe-xicara.jpg" alt="Xícara de café">
+                    <div class="boxText">
+                        <h2 class="titleAbout">Sobre o nosso <b>café</b></h2>
+                        <p>
+                            Já tomou o seu cafezinho hoje? O café é a segunda bebida mais consumida no Brasil, perdendo
+                            apenas para água, de acordo com a Associação Brasileira da Indústria de Café (Abic). Aqueles que
+                            cultivam o hábito de beber café diariamente ingerem uma série de nutrientes. Destacam-se entre
+                            eles, a cafeína --famosa por seu efeito estimulante que dá aquela energia extra para o
+                            organismo. Além disso, o grão é repleto de compostos antioxidantes, vitaminas e minerais que
+                            trazem diversos benefícios e pode até mesmo prevenir doenças.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="containerMenu" id="menu">
+                <h2 class="titleMenu">Nosso menu, <b>Experimente!</b></h2>
+                <div class="boxCard">
+                    <img src="https://th.bing.com/th/id/R.ba9b0a3e05ea2d59ec0ca5d69030097e?rik=cgWvzFS2focpXw&riu=http%3a%2f%2flecafedeclara.fr%2fwp-content%2fuploads%2f2018%2f08%2fexpresso-Macchiato-1024x683.jpg&ehk=K9ZgK0ynPaKsKPn9FBSXNUC%2fLlBi73aGyB%2bAErF%2f%2bZI%3d&risl=&pid=ImgRaw&r=0"
+                        alt="Café Macchiato">
+                    <div class="boxContent">
+                        <h2>Café Macchiato</h2>
+                        <p>
+                            Macchiato é um café de origem italiana que significa manchado, isso devido ao fato de usar café
+                            espresso e um pouco de leite sobre o café.
+                        </p>
+                        <span>R$ 24,99</span>
+                        <button type="button">Comprar</button>
+                    </div>
+                </div>
+                <div class="boxCard">
+                    <img src="https://th.bing.com/th/id/R.acdcf12a42d5149481010b8d4b5339dc?rik=Rk3ReAq%2fZxlZOQ&pid=ImgRaw&r=0"
+                        alt="Café Cappuccino">
+                    <div class="boxContent">
+                        <h2>Café Cappuccino</h2>
+                        <p>
+                            O cappuccino é uma excelente bebida para a saúde humana, pois contém os benefícios do café e do
+                            leite.
+                        </p>
+                        <span>R$ 11,99</span>
+                        <button type="button">Comprar</button>
+                    </div>
+                </div>
+                <div class="boxCard">
+                    <img src="https://th.bing.com/th/id/OIP.Y5PsHFgODR5LjEtz3K4TaAHaEo?pid=ImgDet&rs=1" alt="Café Expresso">
+                    <div class="boxContent">
+                        <h2>Café Expresso</h2>
+                        <p>
+                            Um café expresso, frequentemente referido simplesmente como expresso, é um método de preparar
+                            café através da passagem de água quente (não fervente) sob alta pressão pelo café moído.
+                        </p>
+                        <span>R$ 9,99</span>
+                        <button type="button">Comprar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="containerContact" id="contact">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.359320052365!2d-46.6920077852143!3d-23.591443068588543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5758d3548d13%3A0x89b2eced7816e8c5!2sJK%20Iguatemi!5e0!3m2!1spt-BR!2sbr!4v1647347668203!5m2!1spt-BR!2sbr" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="boxContent">
+                    <div class="boxText">
+                        <h3><i class="fa-solid fa-phone"></i> Telefone</h3>
+                        <p>(11) 3330-0123</p>
+                        <hr>
+                    </div>
+                    <div class="boxText">
+                        <h3><i class="fa-solid fa-at"></i> Email</h3>
+                        <p>suport@coftowe.org</p>
+                        <hr>
+                    </div>
+                    <div class="boxText">
+                        <h3><i class="fa-solid fa-location-dot"></i> Enedereço</h3>
+                        <p>Av. Pres. Juscelino Kubitschek, 2041 - Vila Olímpia, São Paulo - SP, 04543-011</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <ul class="boxSocial">
+                <li>
+                    <a href="https://www.linkedin.com/in/axsgustavo/"><i class="fa-brands fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/axsgustavo/"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/axsgustavo/"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/axsgustavo/"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/axsgustavo/"><i class="fa-brands fa-pinterest"></i></a>
+                </li>
+            </ul>
+            <div class="boxCredits">
+                <p>Desenvolvido por - Gustavo Alves</p>
+            </div>
+        </footer>
+
+        <!-- Scripts JS -->
+        <script src="./scripts/main.js"></script>
+        <script src="./scripts/header.js"></script>
+        <script src="./scripts/menu.js"></script>
+    </body>
+
+</html>
